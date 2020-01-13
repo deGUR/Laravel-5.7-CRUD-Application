@@ -1,0 +1,13 @@
++--------+-----------+-------------------------+------------------+-------------------------------------------------+--------------+
+| Domain | Method    | URI                     | Name             | Action                                          | Middleware   |
++--------+-----------+-------------------------+------------------+-------------------------------------------------+--------------+
+|        | GET|HEAD  | /                       |                  | Closure                                         | web          |
+|        | GET|HEAD  | api/user                |                  | Closure                                         | api,auth:api |
+|        | GET|HEAD  | products                | products.index   | App\Http\Controllers\PProductController@index   | web          |
+|        | POST      | products                | products.store   | App\Http\Controllers\PProductController@store   | web          |
+|        | GET|HEAD  | products/create         | products.create  | App\Http\Controllers\PProductController@create  | web          |
+|        | GET|HEAD  | products/{product}      | products.show    | App\Http\Controllers\PProductController@show    | web          |
+|        | PUT|PATCH | products/{product}      | products.update  | App\Http\Controllers\PProductController@update  | web          |
+|        | DELETE    | products/{product}      | products.destroy | App\Http\Controllers\PProductController@destroy | web          |
+|        | GET|HEAD  | products/{product}/edit | products.edit    | App\Http\Controllers\PProductController@edit    | web          |
++--------+-----------+-------------------------+------------------+-------------------------------------------------+--------------+

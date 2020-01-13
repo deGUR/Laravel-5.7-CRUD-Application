@@ -13,8 +13,8 @@ class ProductController extends Controller {
 	 * @return \Illuminate\Http\Response
 	 */
 	public function index() {
-		$products = Product::latest()->paginate( 5 );
-		
+		$products = Product::latest()->paginate( 3 );
+
 		return view( 'products.index', compact( 'products' ) )
 			->with( 'i', ( request()->input( 'page', 1 ) - 1 ) * 5 );
 	}
@@ -56,6 +56,7 @@ class ProductController extends Controller {
 	 */
 	public function show( Product $product ) {
 		return view( 'products.show', compact( 'product' ) );
+
 	}
 
 	/**
