@@ -105,6 +105,12 @@
        });
      });
    }
+   
+   function openInputForSearching() {
+     $('#btn-search-item').on('click', function () {
+       $('#search').slideToggle('slow');
+     })
+   }
 
    function init() {
      createNewPost();
@@ -112,6 +118,7 @@
      deletePost();
      saveAndUpdatePost();
      tableFiltering();
+     openInputForSearching();
    }
 
    init();
