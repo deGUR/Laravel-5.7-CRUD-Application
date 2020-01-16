@@ -83,6 +83,8 @@
                 <div class="title m-b-md">
                     Laravel
                 </div>
+                <a href="{{url('/products')}}">Without AJAX</a>
+                <a href="{{url('/ajax-posts')}}">With AJAX</a>
             </div>
         </div>
     </body>
