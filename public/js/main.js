@@ -17,16 +17,17 @@
 
    function createNewPost() {
      $('#create-new-post').click(function () {
+       $('.btn').prop('disabled', true);
        $('#posts-crud').prepend(column);
        $('#btn-save').val("create-post");
        $('#postForm').trigger("reset");
-       $('#postCrudModal').html("Add New post");
      });
    }
 
    function editPost() {
      $('body').on('click', '#edit-post', function () {
        var post_id = $(this).data('id');
+       $('.btn').prop('disabled', true);
        $.ajax({
          type: "GET",
          url: "/ajax-posts/"+post_id+"/edit",
@@ -81,8 +82,10 @@
 
            if (actionType == "create-post") {
              $('#posts-crud').prepend(post);
+             $('.btn').prop('disabled', false);
            } else {
              $("#post_id_" + data.id).replaceWith(post);
+             $('.btn').prop('disabled', false);
            }
 
            $("#post_id_" + data.id).show();

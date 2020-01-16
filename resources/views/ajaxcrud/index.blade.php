@@ -17,7 +17,7 @@
     <h2 style="margin-top: 12px;" class="alert alert-success">Laravel 5.7 Ajax CRUD Application</h2><br>
     <div class="row">
         <div class="col-12">
-            <a href="javascript:void(0)" class="btn btn-success mb-2" id="create-new-post">Add item</a>
+            <button type="submit" class="btn btn-success mb-2" id="create-new-post">Add item</button>
             <button type="submit" class="btn btn-primary" id="btn-search-item" style="margin: 0 0 7px 15px">Search
             </button>
 
@@ -42,11 +42,11 @@
                         <td>{{ $post->id  }}</td>
                         <td>{{ $post->title }}</td>
                         <td>{{ $post->body }}</td>
-                        <td><a href="javascript:void(0)" id="edit-post" data-id="{{ $post->id }}" class="btn btn-info">Edit</a>
+                        <td>
+                            <button id="edit-post" data-id="{{ $post->id }}" class="btn btn-info">Edit</button>
                         </td>
                         <td>
-                            <a href="javascript:void(0)" id="delete-post" data-id="{{ $post->id }}"
-                               class="btn btn-danger delete-post">Delete</a></td>
+                            <button id="delete-post" data-id="{{ $post->id }}" class="btn btn-danger delete-post">Delete</button></td>
                     </tr>
                 @endforeach
                 </tbody>

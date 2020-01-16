@@ -15,7 +15,7 @@ class AjaxPostController extends Controller {
 	 */
 	public function index() {
 		//
-		$data['posts'] = Post::orderBy( 'id', 'desc' )->paginate( 5 );
+		$data['posts'] = Post::orderBy( 'id', 'desc' )->paginate( 3 );
 
 		return view( 'ajaxcrud.index', $data );
 	}
