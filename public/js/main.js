@@ -68,7 +68,6 @@
      $('#postForm').on('submit', function (e) {
        e.preventDefault();
        var actionType = $('#btn-save').val();
-       $('#btn-save').html('Sending..');
        var data = $('#postForm').serialize();
        $.ajax({
          data: data,
